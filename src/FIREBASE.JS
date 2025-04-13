@@ -13,3 +13,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 export default db;
+
+import { db } from './firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
+const addOrder = async (orderData) => {
+  try {
+    await addDoc(collection(db, 'orders'), {
+      ...orderData,
+      status: 'pending',
+      timestamp: serverTimestamp()
+    });
+    console.log('Order placed successfully');
+  } catch (err) {
+    console.error('Error placing order:', err);
+  }
+};
