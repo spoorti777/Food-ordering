@@ -1,0 +1,11 @@
+food-ordering-client/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Menu.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Checkout.jsx
+│   ├── firebase.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
