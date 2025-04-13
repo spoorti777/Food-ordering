@@ -14,7 +14,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 export default db;
 
-import { db } from './firebase';
+import { db } from './firebse.JS';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const addOrder = async (orderData) => {
